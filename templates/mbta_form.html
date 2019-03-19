@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MBTA Train Stop</title>
+</head>
+<meta charset="UTF-8">
+    <title>MBTA Train Stop Finder</title>
+
+<body>
+<h1>Location finder</h1>
+<form method="POST" name="location finder">
+    {% if error %}
+    <p style='color:red'>This equation does not have real number solution.</p>
+    {% endif %}
+    <p>
+        Please enter your location:
+    </p>
+    <p>
+        <input type="text" size="20" name='location'>
+
+    </p>
+    <p>
+        <input type="submit" value="Go">
+    </p>
+</form>
+
+</body>
+</html>
