@@ -3,7 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Nearest Stop</title>
-</head><!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+</head>
+<style>
+    .tag{vertical-align:middle}
+    h1,a{color:white}
+</style>
+
+
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
       <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=lYrP4vF3Uk5zgTiGGuEzQGwGIVDGuy24"></script>
@@ -37,14 +47,29 @@
           } <div id='map' style='width: 100%; height:530px; vertical-align: bottom';></div>
       </script>-->
 <body background="https://static1.squarespace.com/static/57757a3cff7c50f318d8aae0/t/577682f99f745615c64d3325/1467384572000/train+set-kingston_3.jpg?format=1500w">
-      <a href="/">Resubmit your location</a>
-
-
-<h1>Nearest Stop to: {{location}}</h1>
-<form method="POST" name="calculator">
+<br/>
+<br/>
+<div class="tag">
+<div class="container" align="center">
+    <div class="jumbotron">
+    <div class="row">
+    <div class="col-sm-12"> <p> <a href="/">Resubmit your location</a></p>
+        </div>
+    <div class="col-sm-12"><h1>Nearest Stop to: {{location}}</h1>
+ </div>
+ <div class="col-sm-12"><form method="POST" name="calculator">
 </form>
 <p>Your nearest stop is:{{near_stop}}</p>
-<p>Is is accessible by wheelchair:{{wheelchair}}</p>
+     <p>Is is accessible by wheelchair:{{wheelchair}}</p>
+    </div>
+</div>
+</div>
+    </div>
+
+</div>
+
+
+
 </body>
 </html>
 
