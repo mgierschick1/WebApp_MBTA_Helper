@@ -47,6 +47,7 @@ def get_nearest_station(latitude, longitude):
    f = urllib.request.urlopen(url_mbta)
    response_text = f.read().decode('utf-8')
    response_data = json.loads(response_text)
+   # return response_data
    if len(response_data['data'])==0:
        near_stop = 'No Information'
        wheelchair = 'No Information'
@@ -65,6 +66,9 @@ def find_stop_near(place_name):
    """
    Given a place name or address, return the nearest MBTA stop and whether it is wheelchair accessible.
    """
+   if ' ' in place_name:
+       idx = place_name.index(' ')
+       place_name = place_name[0:idx]+'+'+place_name[idx+1:]
    data = get_json(url,place_name)
    latitude,longitude = get_lat_long(data)
    return get_nearest_station(latitude,longitude)
@@ -75,10 +79,10 @@ def main():
    """
    You can all the functions here
    """
-   data = get_json(url,"Boston")
-   latitude,longtitude = get_lat_long(data)
-   print(latitude,longtitude)
-   pprint(get_nearest_station(latitude,longtitude))
+   # data = get_json(url,"Framingham")
+   # latitude,longtitude = get_lat_long(data)
+   # print(latitude,longtitude)
+   # pprint(get_nearest_station(latitude,longtitude))
 
 if __name__ == '__main__':
    main()
